@@ -9,7 +9,6 @@ Dies ist eine einfache React-App zur Darstellung und Verwaltung eines Familienst
 - [Projektstruktur](#projektstruktur)
 - [Beschreibung der Dateien](#beschreibung-der-dateien)
 - [Stil](#stil)
-- [Lizenz](#lizenz)
 
 ## Installation
 
