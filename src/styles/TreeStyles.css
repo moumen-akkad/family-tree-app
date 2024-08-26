@@ -1,0 +1,71 @@
+.tree-node {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.male .person-info {
+    background-color: #add8e6;
+    /* Light Blue for males */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #007bff;
+    /* Blue border */
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.female .person-info {
+    background-color: #ffcccb;
+    /* Light Red for females */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ff6347;
+    /* Red border */
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.children {
+    display: flex;
+    margin-left: 40px;
+}
+
+.children .tree-node {
+    margin-left: 20px;
+    margin-top: 10px;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+}
+
+.add-member-form,
+.edit-member-form {
+    margin-top: 10px;
+}
+
+.add-member-form input.obligatory,
+.edit-member-form input.obligatory {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.add-member-form input,
+.add-member-form select,
+.edit-member-form input,
+.edit-member-form select {
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-member-form input[type="text"],
+.add-member-form input[type="date"],
+.edit-member-form input[type="text"],
+.edit-member-form input[type="date"] {
+    background-color: #f9f9f9;
+}
