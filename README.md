@@ -1,15 +1,67 @@
-was diese Seite kann:
+# Family Tree App
 
-ermöglicht es interaktiven Familienstammbaum zu erstellen und zu verwalten. Die wichtigsten Funktionen umfassen:
+Dies ist eine einfache React-App zur Darstellung und Verwaltung eines Familienstammbaums. Die App ermöglicht das Hinzufügen, Bearbeiten, Verschieben und Entfernen von Familienmitgliedern in einem dynamischen Drag-and-Drop-Baum.
 
-- Dynamisches Hinzufügen von Familienmitgliedern: man kann Familienmitglieder zum Stammbaum hinzufügen und dabei müssen deren Namen und Geburtsdatum angegeben werden als pflichtfelder.
+## Inhaltsverzeichnis
 
-- Bearbeiten von Knoten: Nachdem ein Familienmitglied hinzugefügt wurde, kann man die Felder für Todesdatum, Geburtsort und Todesort nachträglich bearbeiten/eintragen.
+- [Installation](#installation)
+- [Verwendung](#verwendung)
+- [Projektstruktur](#projektstruktur)
+- [Beschreibung der Dateien](#beschreibung-der-dateien)
+- [Stil](#stil)
+- [Lizenz](#lizenz)
 
-- Visuelle Darstellung nach Geschlecht: Männliche Knoten werden in Blau und weibliche Knoten in Rot dargestellt.
+## Installation
 
-- Pflichtfelder und optionale Felder: Pflichtfelder wie Name und Geburtsdatum sind optisch von den optionalen Feldern für Todesdatum und Orte unterscheidbar.
+1. Klonen Sie dieses Repository:
+   git clone https://github.com/your-username/family-tree-app.git
+   
+3. Wechseln Sie in das Projektverzeichnis:
+   cd family-tree-app
+   
+5. Installieren Sie die Abhängigkeiten:
+   npm install
 
-- Dropdown-Listen mit Autovervollständigung: Für die Auswahl des Geschlechts sowie des Geburts- und Todesorts stehen Dropdown-Listen zur Verfügung, die eine schnelle Auswahl ermöglichen. Benutzer können auch tippen, um schneller die gewünschte Option zu finden.
+## Verwendung
 
-- Drag-and-Drop-Funktionalität: Benutzer können Familienmitglieder per Drag-and-Drop innerhalb des Stammbaums neu anordnen.
+Starten Sie die App mit dem folgenden Befehl:
+```bash
+npm start
+```
+
+Die App wird im Standard-Browser unter `http://localhost:3000` geöffnet.
+
+## Projektstruktur
+
+├── src
+│   ├── components
+│   │   ├── FamilyTree.js
+│   │   ├── TreeNode.js
+│   ├── styles
+│   │   └── TreeStyles.css
+│   ├── App.js
+│   └── index.js
+└── README.md
+
+## Beschreibung der Dateien
+
+### `App.js`
+Die Hauptkomponente der App. Sie umgibt den Familienstammbaum mit dem Drag-and-Drop-Provider (`DndProvider`) und enthält eine Schaltfläche, um den Baum zurückzusetzen, indem die Daten im `localStorage` gelöscht und die Seite neu geladen wird.
+
+### `FamilyTree.js`
+Diese Komponente ist die Wurzel des Familienstammbaums. Sie verwaltet den Zustand (`state`) des gesamten Baums, einschließlich der Daten für die Familienmitglieder. Funktionen zum Hinzufügen, Bearbeiten, Verschieben und Entfernen von Mitgliedern sind in dieser Komponente implementiert.
+
+### `TreeNode.js`
+Diese Komponente stellt einzelne Knoten (d.h. Familienmitglieder) im Baum dar. Sie enthält die Logik für die Drag-and-Drop-Funktionen sowie die Formulare zum Hinzufügen und Bearbeiten von Mitgliedern. Jeder Knoten kann Kinder (weitere Knoten) enthalten, wodurch die Baumstruktur entsteht.
+
+### `TreeStyles.css`
+Dieses Datei enthält die Stile für den Familienstammbaum. wird unter "Stil" weiter erklärt
+
+## Stil
+
+Die App verwendet CSS für das Styling der Komponenten. Die wichtigsten Stilelemente sind:
+
+- .tree-node: Grundstruktur eines Knoten im Baum.
+- .male .person-info und .female .person-info: Stile für männliche und weibliche Mitglieder.
+- .children: Stil für die Anzeige von Kindknoten.
+- .add-member-form und .edit-member-form: Stile für die Formulare zum Hinzufügen und Bearbeiten von Mitgliedern.
